@@ -18,8 +18,9 @@ Fig. 2 above shows the mask generation quality of MHParsNet. From Fig. 2, MHPars
 
 &nbsp;
 #### Evaluation: comparision of ```MHParsNet's``` mask quality with other state-of-the-art algorithms
-![Figure 3. Parsing (segmentation) comparision](seg_comp.png)
+As afore mentioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Therefore, the evaluation of the segmentation mask quality is performed between ```MHParsNet's``` and ```M-CE2P``` only. The evaluation is performed on the CIHP and MHPv2 datasets
 
+![Figure 3. Parsing (segmentation) comparision](seg_comp.png)
 
 e could not replicate the models enu-
 merated in Table 1 to obtain the exact parameter counts.

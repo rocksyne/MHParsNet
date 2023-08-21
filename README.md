@@ -23,4 +23,14 @@ As aforementioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the 
 ![](seg_comp.png)
 **Figure 2.** Comparision of the segmentation (parsing) mask quality between ```MHParsNet```(ours) and ```M-CE2P```.
 
-As shown in Fig. 2, `3.jpg` comprises 2 human instances; a male and a femal subject. According to the groundtruth annotation, the male subject posseses the following attributes: ```hair```, ```face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```right-hand```,  ```pants```, ```left-shoe``` and ```right-shoe```. The female subject on the other posses: ```hair```, ```face```, ```right-arm```, ```left-arm```, ```right-hand```, ```right-hand```, ```Backpack```, ```pants```, ```Belt```, ```left-shoe``` and ```right-shoe```. As shown, despite having fewer trainable parameters, ```MHParsNet``` generates better segmentation masks compared to ```M-CE2P```.
+As shown in Fig. 2, `3.jpg` comprises 2 human instances; a male and a femal subject. According to the groundtruth annotation, the male subject posseses the following attributes: ```hair```, ```face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```right-hand```,  ```pants```, ```left-shoe``` and ```right-shoe```. The female subject on the other posses: ```hair```, ```face```, ```right-arm```, ```left-arm```, ```right-hand```, ```right-hand```, ```Backpack```, ```pants```, ```Belt```, ```left-shoe``` and ```right-shoe```. 
+
+talk about the false positives of both. talk about the false negatives of both, then talk about how mine is better
+
+As shown, despite having fewer trainable parameters, ```MHParsNet``` generates better segmentation masks compared to ```M-CE2P```.
+
+
+
+&nbsp;
+#### Evaluation: deployment on [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board
+some data

@@ -1,7 +1,9 @@
 # MHParsNet
 
 ## Results
-#### Comaprision of ```MHParsNet``` with state-of-the art algorithms
+#### Comaprision of ```MHParsNet``` with state-of-the art algorithms using AP<sup>r</sup>, AP<sup>p</sup> and PCP
+Except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Some reasons include deprecated codes (libraries), inadequate documentation, and incompatible dependencies. For such algorithms (marked by∗), the backbone network's size (parameter count) is provided to give a general sense of the model's scale and complexity. Therefore, the entire model is expected to be significantly larger.
+
 ![Figure 1. Evaluation results tabel](results_table.png)
 
 &nbsp;

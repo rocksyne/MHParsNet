@@ -35,6 +35,7 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 
 
 
-https://github.com/rocksyne/MHParsNet/assets/925925/0c8ea254-10da-49f5-ac80-cbffd2d50853
+
+https://github.com/rocksyne/MHParsNet/assets/925925/6d347ed3-7793-4a18-92bb-93594cf066bd
 
 

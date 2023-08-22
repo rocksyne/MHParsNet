@@ -20,7 +20,7 @@ Fig. 1 above shows the mask generation quality of MHParsNet. From Fig. 1, MHPars
 #### Evaluation: comparision of ```MHParsNet's``` mask quality with other state-of-the-art algorithms
 As aforementioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Therefore, the evaluation of the segmentation mask quality is performed between ```MHParsNet``` and ```M-CE2P``` only. The evaluation is performed on the CIHP and MHPv2 datasets, but the result of ```3.jpg``` from the [MHPV2](https://lv-mhp.github.io/dataset) validation dataset only is showed here.
 
-![](seg_comp.png)
+![](comparision.png)
 **Figure 2.** Comparision of the segmentation (parsing) mask quality between ```MHParsNet```(ours) and ```M-CE2P```.
 
 As shown in Fig. 2, `3.jpg` comprises 2 human instances; a male and a femal subject. According to the groundtruth annotation, the male subject posseses the following attributes: ```hair```, ```face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```right-hand```,  ```pants```, ```left-shoe``` and ```right-shoe```. The female subject on the other posses: ```hair```, ```face```, ```right-arm```, ```left-arm```, ```right-hand```, ```right-hand```, ```Backpack```, ```pants```, ```Belt```, ```left-shoe``` and ```right-shoe```. 

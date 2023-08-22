@@ -32,3 +32,9 @@ For the male subject, ```M-CE2P``` makes a **false negative** prediction on the 
 &nbsp;
 #### Evaluation: deployment on [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board
 To evaluate the adaptability of MHParsNet on embedded devices, we conducted inference on a smart camera prototype using the [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board and the [Logitecg C920 HD Pro Webcam](https://www.logitech.com/de-at/products/webcams/c920-pro-hd-webcam.960-001055.html). We used the [Ubuntu 20.04 OS image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) from [Qengineering](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image). ```MHParsNet``` achieved 6 FPS on average on the smart camera prototype. With up to four human instances, a maximum of 11 frames per second could be achieved. The details of the code implementation are in ```camera_view.py```.
+
+
+
+https://github.com/rocksyne/MHParsNet/assets/925925/0c8ea254-10da-49f5-ac80-cbffd2d50853
+
+

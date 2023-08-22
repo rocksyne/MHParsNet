@@ -23,11 +23,9 @@ As aforementioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the 
 ![](comparision.png)
 **Figure 2.** Comparision of the segmentation (parsing) mask quality between ```MHParsNet```(ours) and ```M-CE2P```.
 
-As shown in Fig. 2, `3.jpg` comprises 2 human instances; a male and a femal subject. According to the groundtruth annotation, the male subject posseses the following attributes: ```hair```, ```face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```right-hand```,  ```pants```, ```left-shoe``` and ```right-shoe```. The female subject on the other posses: ```hair```, ```face```, ```right-arm```, ```left-arm```, ```right-hand```, ```right-hand```, ```Backpack```, ```pants```, ```Belt```, ```left-shoe``` and ```right-shoe```. 
+As shown in Fig. 2, `3.jpg` comprises 2 human instances; a male and a femal subject. According to the groundtruth annotation, the male subject posseses the following attributes: ```hair```, ```face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```right-hand```,  ```pants```, ```left-shoe``` and ```right-shoe```. The female subject on the other posses: ```hair```, ```face```, ```Singlet```, ```right-arm```, ```left-arm```, ```right-hand```, ```right-hand```, ```Backpack```, ```pants```, ```Belt```, ```left-shoe``` and ```right-shoe```. 
 
-talk about the false positives of both. talk about the false negatives of both, then talk about how mine is better
-
-As shown, despite having fewer trainable parameters, ```MHParsNet``` generates better segmentation masks compared to ```M-CE2P```.
+For the male subject, M-CE2P makes a false negative prediction on the ```Torso-skin``` whiles on the female subject it makes the following false negative mask predictions: ```right-arm```, ```right-hand```, ```Backpack```, ```Belt```, ```left-shoe``` and ```right-shoe```. Additionally it falsely predicts some object classes in the upper body part of the female subject. Our ```MHParsNet``` on the ther hand makes no false positves class predictions in the upper body part of the female subject. Additionally all but the ```Belt```, ```Torso-skin```, ```right-arm``` and the ```Backpack``` classes are missed from the mask predictions. For the male subject, only the ```Torso-skin``` class is missed. From a visual perspective, it can be observed despite having fewer trainable parameters, ```MHParsNet``` predicts higher quality segmentation masks compared to ```M-CE2P```.
 
 
 

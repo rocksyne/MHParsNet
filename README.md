@@ -1,6 +1,6 @@
-> The entire codebase to this work will be made publicly available after the publication of this work. For now, the code base is available on demand. Please write to the authors Rockson Ayeman (rockson.agyeman@aau.at), or Bernhard Rinner (bernhard.rinner@aau.at) for access.
-> 
-> &nbsp;
+> The entire codebase of this work will be made publicly available after the publication of this work. For now, the codebase is available on request only. Please write to the authors Rockson Ayeman (rockson.agyeman@aau.at) or Bernhard Rinner (bernhard.rinner@aau.at) for access or inquiry. Thanks.
+
+&nbsp;
 
 # Multi-Human Parsing Network (MHParsNet)
 **Contribution Summary**:

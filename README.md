@@ -1,4 +1,4 @@
-# MHParsNet
+# Multi-Human Parsing Network (MHParsNet)
 **Contribution Summary**:
 
 This work presents **M**ulti **H**uman **Pars**ing **Net**work (**MHParsNet**), a resource-efficient multi-human parsing framework designed for resource-constrained embedded devices. MHParsNet leverages the grid cell concept of YOLO for object detection by incorporating segmentation mask generation for multi-human parsing. Despite the minimal resource requirement of ```MHParsNet```, it generates higher-quality segmentation (parsing) masks compared to select state-of-the-art algorithms. To validate our objective, we implemented ```MHParsNet``` on a smart camera prototype using the Nvidia Jetson embedded board and achieved 6 FPS (on average) at inference.  
@@ -40,3 +40,31 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 ![](cam_result.gif)
 
 **Figure 3.** Output of the smart camera prototype.
+
+&nbsp;
+## Requirements (dependencies) and basic setup
+> 1. Install or set-up the following dependencies. Please see ```requirements.txt``` for the complement list of dependencies.
+
+- Operating System: Ubuntu 20.04.6 LTS
+- CUDA Version: 11.7
+- python version: 3.10.11
+- pytorch version: 1.13.1
+- setuptools version: 67.8.0
+- torchaudio version: 0.13.1
+- torchvision version: 0.14.1
+- pillow version: 9.4.0
+- opencv-python version: 4.8.0.74
+- tqdm version: 4.65.0
+- numpy version: 1.25.0
+- natsort version: 8.4.0
+
+> 2. Clone this repository, navigate into the parent directory (path/to/MHParsNet) and do ```python setup.py develop```
+
+&nbsp;
+## Dataset and pre-trained model
+- CIHP: [download from here](https://sysu-hcp.net/lip/overview.php)
+- MHPV2: [download from here](https://lv-mhp.github.io/dataset)
+- Pre-trained model: [download from here](#)
+
+
+

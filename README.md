@@ -48,7 +48,7 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 
 
 **Why do the colors of the segmentations keep changing?**
-> The color pallets assigned to the segmentation masks are generated based on the number of predicted segmentation masks per video frame. Practically, it is impossible to forecast the number of people that may enter the field of view of a camera. Similarly, it is impossible to forecast the number of body part (attributes) each person may posses; thus, it is impractical to set the number of color pallets to a fixed number. Therefore, for every video frame, the color pallets are generated according to the number of mask predictions, and this is why the colors of the class instances keep changing.
+> The color pallets assigned to the segmentation masks are generated based on the number of predicted segmentation masks per video frame. Practically, it is impossible to forecast the number of people that may enter the field of view of a camera. Similarly, it is impossible to forecast the number of body parts (attributes) each person may posses; thus, it is impractical to set the number of color pallets to a fixed number. Therefore, for every video frame, the color pallets are generated according to the number of mask predictions, and this is why the colors of the class instances keep changing.
 
 &nbsp;
 ## Requirements (dependencies) and basic setup

@@ -44,7 +44,7 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 
 ![](cam_result.gif)
 
-**Figure 3.** Output of the smart camera prototype. Downlod [video](https://github.com/rocksyne/MHParsNet/blob/main/webcam.gif) from [here](https://github.com/rocksyne/MHParsNet/blob/main/webcam.gif) if it does not load.
+**Figure 3.** Output of the smart camera prototype. Downlod [video](https://github.com/rocksyne/MHParsNet/blob/main/cam_result.gif) from [here](https://github.com/rocksyne/MHParsNet/blob/main/cam_result.gif) if it does not load.
 
 
 **Why do the colors of the segmentations keep changing?**

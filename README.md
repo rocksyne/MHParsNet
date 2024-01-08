@@ -1,5 +1,5 @@
 &nbsp;
-> The codebase will be made public after the publication of this work. For now, the codebase is available on request only. Please write to the authors via rockson.agyeman@aau.at or bernhard.rinner@aau.at for access or inquiry. Thank you.
+> The codebase of this work will be made public after the publication of this work. For now, the codebase is available on request only. Please write to the authors via rockson.agyeman@aau.at or bernhard.rinner@aau.at for access or inquiry. Thank you.
 
 &nbsp;
 
@@ -21,6 +21,7 @@ Except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art al
 
 #### Evaluation: the quality of the parsing (segmentation) masks predicted by ```MHParsNet```
 ![](segmentation_result.png)
+
 **Figure 1.** Parsing (segmentation) result of MHParsNet on sample data from the [MHPV2](https://lv-mhp.github.io/dataset) validation dataset.
 &nbsp;
 
@@ -31,6 +32,7 @@ Fig. 1 above shows the mask generation quality of MHParsNet. From Fig. 1, MHPars
 As aforementioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Therefore, the evaluation of the segmentation mask quality is performed between ```MHParsNet``` and ```M-CE2P``` only. The evaluation is performed on the [CIHP](https://sysu-hcp.net/lip/overview.php) and [MHPv2](https://lv-mhp.github.io/dataset) datasets, but the result of ```3.jpg``` from the [MHPV2](https://lv-mhp.github.io/dataset) validation dataset only is showed here.
 
 ![](comparision.png)
+
 **Figure 2.** Comparision of the segmentation (parsing) mask quality between ```MHParsNet```(ours) and ```M-CE2P```.
 
 As shown in Fig. 2, `3.jpg` comprises two human instances; a male and a female subject. According to the ground truth annotation, the male subject possesses the following attributes: ```Hair```, ```Face```, ```Torso-skin```, ```Jacket/windbreaker/hoodie```, ```Singlet```,  ```Right-hand```,  ```Pants```, ```Left-shoe``` and ```Right-shoe```. The female subject on the other posses: ```Hair```, ```Face```, ```Singlet```, ```Right-arm```, ```Left-arm```, ```Right-hand```, ```Left-hand```, ```Backpack```, ```Pants```, ```Belt```, ```Left-shoe``` and ```Right-shoe```. 
@@ -44,18 +46,11 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 
 ![](cam_result.gif)
 
-**Figure 3.** Output of the smart camera prototype. Downlod [video](https://github.com/rocksyne/MHParsNet/blob/main/cam_result.gif) from [here](https://github.com/rocksyne/MHParsNet/blob/main/cam_result.gif) if it does not load.
+**Figure 3.** Output of the smart camera prototype.
 
 
 **Why do the colors of the segmentations keep changing?**
 > The color pallets assigned to the segmentation masks are generated based on the number of predicted segmentation masks per video frame. Practically, it is impossible to forecast the number of people that may enter the field of view of a camera. Similarly, it is impossible to forecast the number of body parts (attributes) each person may posses; thus, it is impractical to set the number of color pallets to a fixed number. Therefore, for every video frame, the color pallets are generated according to the number of mask predictions, and this is why the colors of the class instances keep changing.
-
-&nbsp;
-### Other sample images
-![](test_image.png)
-
-**Figure 4.** Human and part instance segmentation on a sample image taken from the [internet](https://www.studycheck.de/images/fit/920x521/media/images/institute_gallery_images/uni-klagenfurt/AAU_Sommer_2021_C_Arnold_Poeschl_76.jpg).
-
 
 &nbsp;
 ## Requirements or dependencies
@@ -75,10 +70,44 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 
 
 &nbsp;
-## Dataset and pre-trained model
+## Other resources: dataset and pre-trained model
 - CIHP: [download from here](https://sysu-hcp.net/lip/overview.php)
 - MHPV2: [download from here](https://lv-mhp.github.io/dataset)
-- Pre-trained model: [Google Drive download](https://drive.google.com/drive/folders/166hl7qJVpgR7Z9KIELXUHM55FbgqhrHH?usp=sharing)
+- Pre-trained model: coming soon
+
+&nbsp;
+## Setup
+- Install dependencies. Complete list of dependencies is in ```requirements.txt```
+- Download or clone MHParsNet repository
+- Navigate into MHParsNet directory. ```cd /path/to/MHParsNet``` 
+- Execute ```python setup.py develop```. On the Jetson Nano, do ```python setup.py develop --install-dir ~/```
+- Download [Pre-trained model](#) and put in ```MHParsNet/data/outputs/models/```
+
+> Please make sure your ```nvcc``` version is the same as your ```cuda``` version. This work was done using CUDA Version 11.7. To check for ```nvcc``` version, do ```nvcc --version```, and to check for ```cuda``` version, do ```nvidia-smi```. See [https://stackoverflow.com/q/53422407/3901871](https://stackoverflow.com/q/53422407/3901871) for discussion
 
 
+### Preparing datasets
+The annotations in the CIHP dataset are grouped into ```semantic part segmentation```, ```semantic person segmentation```, and ```instance-level``` parsing labels.
+The annotations in MHP are not grouped into semantic and instance categories. Rather for each image, the ground truth annotations are distributed across ```N``` images, where ```N``` denotes the number of human instances in the image. For convenience, we pre-processed all such annotations into the grouping format of CIHP. We used the [pre-processing library](https://github.com/RanTaimu/M-CE2P/blob/master/metrics/MHP2CIHP.py) provided by [RanTaimu](https://github.com/RanTaimu).
 
+### MHPV2:
+- Download and extract [MHPV2 dataset](https://lv-mhp.github.io/dataset) to, for example, ```~/Desktop/LV-MHP-v2```
+- Execute ```python MHP2CIHP.py -d ~/Desktop/LV-MHP-v2```, assuming ```~/Desktop/LV-MHP-v2``` is the parent directory of the MHPV2 dataset
+
+
+&nbsp;
+## Inference / test
+### Inference on single image
+``` python evaluate.py```
+
+&nbsp;
+### Predict and save predicton images
+> The ```predict_and_save.py``` script performs semantic and instance segmentation predictions on images. The predictions are saved as colored images. Additionally, it saves an acceleration  file by writing sematic classs and corresponding confidence scores to a text file. This file is important when computing the AP<sup>r</sup>, AP<sup>p</sup> and PCP metrics. The ouput is written to ```MHParsNet/data/outputs/instance_pred_folder``` and ```MHParsNet/data/outputs/semantic_pred_folder```.
+
+``` python predict_and_save.py```
+
+&nbsp;
+### Smart Camera Prototype
+> Set-up an [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board and a [Logitecg C920 HD Pro Webcam](https://www.logitech.com/de-at/products/webcams/c920-pro-hd-webcam.960-001055.html) as the smart camera prototype. Download and use the [Ubuntu 20.04 OS image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) from [Qengineering](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to setup the operating system on the Jetson Nano device. The libraries provided by the Ubuntu 20.04 OS image should be sufficient, but where neccessary [install the dependencies](https://gitlab.aau.at/roagyeman/mhparsnet#requirements-or-dependencies), and follow all steps in the [Setup](https://gitlab.aau.at/roagyeman/mhparsnet#setup). Then execute
+
+``` python camera_view.py```

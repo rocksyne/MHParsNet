@@ -73,7 +73,7 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 ## Other resources: dataset and pre-trained model
 - CIHP: [download from here](https://sysu-hcp.net/lip/overview.php)
 - MHPV2: [download from here](https://lv-mhp.github.io/dataset)
-- Pre-trained model: coming soon
+- Pre-trained model: [download from here](https://drive.google.com/drive/folders/166hl7qJVpgR7Z9KIELXUHM55FbgqhrHH?usp=sharing)
 
 &nbsp;
 ## Setup
@@ -81,9 +81,9 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 - Download or clone MHParsNet repository
 - Navigate into MHParsNet directory. ```cd /path/to/MHParsNet``` 
 - Execute ```python setup.py develop```. On the Jetson Nano, do ```python setup.py develop --install-dir ~/```
-- Download [Pre-trained model](#) and put in ```MHParsNet/data/outputs/models/```
+- Download the [pre-trained model](https://drive.google.com/drive/folders/166hl7qJVpgR7Z9KIELXUHM55FbgqhrHH?usp=sharing), that is the entire model and the model with state dictionaries, and put them into ```MHParsNet/data/outputs/models/```
 
-> Please make sure your ```nvcc``` version is the same as your ```cuda``` version. This work was done using CUDA Version 11.7. To check for ```nvcc``` version, do ```nvcc --version```, and to check for ```cuda``` version, do ```nvidia-smi```. See [https://stackoverflow.com/q/53422407/3901871](https://stackoverflow.com/q/53422407/3901871) for discussion
+> Please make sure your ```nvcc``` version is the same as your ```cuda``` version. This work was done using CUDA Version 11.7. To check for ```nvcc``` version, do ```nvcc --version```, and to check for ```cuda``` version, do ```nvidia-smi```. See [https://stackoverflow.com/q/53422407/3901871](https://stackoverflow.com/a/76581411/3901871) for discussion and possible solution.
 
 
 ### Preparing datasets

@@ -78,7 +78,7 @@ To evaluate the adaptability of MHParsNet on embedded devices, we conducted infe
 ## Dataset and pre-trained model
 - CIHP: [download from here](https://sysu-hcp.net/lip/overview.php)
 - MHPV2: [download from here](https://lv-mhp.github.io/dataset)
-- Pre-trained model: coming soon
+- Pre-trained model: [Google Drive download](https://drive.google.com/drive/folders/166hl7qJVpgR7Z9KIELXUHM55FbgqhrHH?usp=sharing)
 
 
 

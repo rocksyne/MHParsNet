@@ -14,13 +14,13 @@ This work presents **M**ulti **H**uman **Pars**ing **Net**work (**MHParsNet**), 
 #### Comaprision of ```MHParsNet``` with state-of-the art algorithms using AP<sup>r</sup>, AP<sup>p</sup> and PCP
 Except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Some reasons include deprecated codes (libraries), inadequate documentation, and incompatible dependencies. For such algorithms (marked by∗), the backbone network's size (parameter count) is provided to give a general sense of the model's scale and complexity. Therefore, the entire model is expected to be significantly larger. Table 1 below presents the empirical multi-human parsing results of ```MHParsNet```.
 
-![](results_table.png)
+![](docs/results_table.png)
 
 &nbsp;
 
 
 #### Evaluation: the quality of the parsing (segmentation) masks predicted by ```MHParsNet```
-![](segmentation_result.png)
+![](docs/segmentation_result.png)
 
 **Figure 1.** Parsing (segmentation) result of MHParsNet on sample data from the [MHPV2](https://lv-mhp.github.io/dataset) validation dataset.
 &nbsp;
@@ -31,7 +31,7 @@ Fig. 1 above shows the mask generation quality of MHParsNet. From Fig. 1, MHPars
 #### Evaluation: comparision of ```MHParsNet's``` mask quality with other state-of-the-art algorithms
 As aforementioned, except for [M-CE2P](https://github.com/RanTaimu/M-CE2P), the state-of-the-art algorithms enumerated in Table 1 could not be replicated. Therefore, the evaluation of the segmentation mask quality is performed between ```MHParsNet``` and ```M-CE2P``` only. The evaluation is performed on the [CIHP](https://sysu-hcp.net/lip/overview.php) and [MHPv2](https://lv-mhp.github.io/dataset) datasets, but the result of ```3.jpg``` from the [MHPV2](https://lv-mhp.github.io/dataset) validation dataset only is showed here.
 
-![](comparision.png)
+![](docs/comparision.png)
 
 **Figure 2.** Comparision of the segmentation (parsing) mask quality between ```MHParsNet```(ours) and ```M-CE2P```.
 
@@ -44,7 +44,7 @@ For the male subject, ```M-CE2P``` makes a false negative prediction on the ```T
 #### Evaluation: deployment on [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board
 To evaluate the adaptability of MHParsNet on embedded devices, we conducted inference on a smart camera prototype using the [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board and the [Logitecg C920 HD Pro Webcam](https://www.logitech.com/de-at/products/webcams/c920-pro-hd-webcam.960-001055.html). We used the [Ubuntu 20.04 OS image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) from [Qengineering](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image) to setup the operating system on the Nvidia Jetson Nano device. ```MHParsNet``` achieves 6 FPS on average on the smart camera prototype. With up to four human instances, ```MHParsNet``` achieves a maximum of 11 frames per second. The details of the code implementation are in ```camera_view.py```. Figure 3 below is an example of the output from the smart camera prototype.
 
-![](cam_result.gif)
+![](docs/cam_result.gif)
 
 **Figure 3.** Output of the smart camera prototype.
 

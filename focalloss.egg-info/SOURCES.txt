@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+focalloss.egg-info/PKG-INFO
+focalloss.egg-info/SOURCES.txt
+focalloss.egg-info/dependency_links.txt
+focalloss.egg-info/not-zip-safe
+focalloss.egg-info/top_level.txt
+modules/sigmoid_focal_loss/src/sigmoid_focal_loss.cpp
+modules/sigmoid_focal_loss/src/sigmoid_focal_loss_cuda.cu

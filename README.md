@@ -1,6 +1,6 @@
 
 # Multi-Human Parsing Network (MHParsNet)
-**Contribution Summary**:
+**Work Summary**:
 
 This work presents **M**ulti **H**uman **Pars**ing **Net**work (**MHParsNet**), a resource-efficient multi-human parsing framework designed for resource-constrained embedded devices. MHParsNet leverages the grid cell concept of YOLO for object detection by incorporating segmentation mask generation for multi-human parsing. Despite the minimal resource requirement of ```MHParsNet```, it generates higher-quality segmentation (parsing) masks compared to select state-of-the-art algorithms. To validate our objective, we implemented ```MHParsNet``` on a smart camera prototype using the Nvidia Jetson embedded board and achieved 6 FPS (on average) at inference.  
 

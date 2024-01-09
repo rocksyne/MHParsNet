@@ -38,7 +38,7 @@ For the male subject, ```M-CE2P``` makes a false negative prediction on the ```T
 
 &nbsp;
 #### Test on sample image downloaded from the internet
-![](docs/test_image.gng)
+![](docs/test_image.png)
 
 &nbsp;
 #### Evaluation: deployment on [Nvidia Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) embedded board

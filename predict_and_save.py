@@ -343,8 +343,6 @@ for human_image, category_image, image in tqdm(list(zip(all_human_images,all_cat
         for instance_id,confidence_score in confidence_scores.items():
             semantic_class = class_map[instance_id]
             fp.write('{} {}\n'.format(semantic_class, confidence_score*100))
-    
-    print("Shape of this is: ", pred_semantic_mask.dtype)
 
     # add color to semantic predictions and save as image
     pred_semantic_mask = PILImage.fromarray(pred_semantic_mask) 

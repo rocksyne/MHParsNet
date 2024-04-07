@@ -1,7 +1,7 @@
 
 # Multi-Human Parsing Network (MHParsNet)
 
-This work has been accepted in the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)-2024 conference.
+This work has been accepted at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)-2024 conference.
 
 ```
 @INPROCEEDINGS{10447796,

@@ -1,5 +1,20 @@
 
 # Multi-Human Parsing Network (MHParsNet)
+
+This work has been accepted in the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)-2024 conference.
+
+```
+@INPROCEEDINGS{10447796,
+  author={Agyeman, Rockson and Rinner, Bernhard},
+  booktitle={ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Real-Time Multi-Human Parsing on Embedded Devices}, 
+  year={2024},
+  pages={5145-5149},
+  doi={10.1109/ICASSP48485.2024.10447796}}
+```
+&nbsp;
+
+
 **Work Summary**:
 
 This work presents **M**ulti **H**uman **Pars**ing **Net**work (**MHParsNet**), a resource-efficient multi-human parsing framework designed for resource-constrained embedded devices. MHParsNet leverages the grid cell concept of YOLO for object detection by incorporating segmentation mask generation for multi-human parsing. Despite the minimal resource requirement of ```MHParsNet```, it generates higher-quality segmentation (parsing) masks compared to select state-of-the-art algorithms. To validate our objective, we implemented ```MHParsNet``` on a smart camera prototype using the Nvidia Jetson embedded board and achieved 6 FPS (on average) at inference.  
